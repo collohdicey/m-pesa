@@ -1,0 +1,1 @@
+[14-Jul-2020 12:20:07 America/New_York] PHP Warning:  Use of undefined constant string - assumed 'string' (this will throw an Error in a future version of PHP) in /home/njoka/demo.njoka.net/payment/confirmation/index.php on line 15
