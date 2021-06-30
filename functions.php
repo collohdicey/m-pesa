@@ -34,8 +34,8 @@ function registerURL($shortcode)
   $curl_post_data = array(
     'ShortCode' => $shortcode,
     'ResponseType' => 'Completed',
-    'ConfirmationURL' => 'http://demo.njoka.net/payment/confirmation/',
-    'ValidationURL' => 'http://demo.njoka.net/payment/validation/'
+    'ConfirmationURL' => 'http://cac12eeb18f7.ngrok.io/m-pesa/confirmation/',
+    'ValidationURL' => 'http://cac12eeb18f7.ngrok.io/m-pesa/validation/'
   );
 
   $data_string = json_encode($curl_post_data);
@@ -51,6 +51,7 @@ function registerURL($shortcode)
 
 function simulatC2B($amount, $phone)
 {
+registerURL(603021);
     global $shortcode;
   $url = 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate';
 
@@ -63,7 +64,7 @@ function simulatC2B($amount, $phone)
            'CommandID' => 'CustomerPayBillOnline',
            'Amount' => $amount,
            'Msisdn' => $phone,
-           'CallBackURL' => 'http://demo.njoka.net/payment/callback/',
+           'CallBackURL' => 'http://cac12eeb18f7.ngrok.io/m-pesa/callback/',
            'BillRefNumber' => '00000'
     );
 
@@ -101,7 +102,7 @@ function payment()
     'PartyA' => '254719578752',
     'PartyB' => '174379',
     'PhoneNumber' => '254719578752',
-    'CallBackURL' => 'http://demo.njoka.net/payment/callback/',
+    'CallBackURL' => 'http://cac12eeb18f7.ngrok.io/m-pesa/callback/',
     'AccountReference' => 'testing',
     'TransactionDesc' => 'test'
   );

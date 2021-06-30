@@ -2,10 +2,10 @@
 
 function insert_response($jsonMpesaResponse){
 
-		$dbName = 'njoka_mpesa';
+		$dbName = 'mpesaAPI';
 		$dbHost = 'localhost';
-		$dbUser = 'njoka_mpesadmin';
-		$dbPass = 'gsD;n([VFRU5';
+		$dbUser = 'root';
+		$dbPass = '';
 
 	try{
 		$con = new PDO("mysql:dbhost=$dbHost;dbname=$dbName", $dbUser, $dbPass);
